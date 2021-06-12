@@ -1286,6 +1286,7 @@ pre .javascript .function {
   margin: 0 auto;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
 }
 .site-author-name {
   color: var(--text-color);
@@ -1313,7 +1314,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #57584f;
+  background: #ac2194;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1638,6 +1639,16 @@ pre .javascript .function {
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
+}
+.reading-progress-bar {
+  background: #06d633;
+  display: block;
+  height: 3px;
+  left: 0;
+  position: fixed;
+  width: 0;
+  z-index: 1500;
+  top: 0;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -2590,11 +2601,40 @@ body {
 }
 @media (max-width: 767px) {
   body {
-    background-image: url("https://ziyuan.lruihao.cn/images/bg_cell.png");
     background-size: cover;
   }
   body #busuanzi_value_site_pv,
   body #busuanzi_value_site_uv {
     color: #00bfff;
   }
+}
+.post-button .btn {
+  color: #555 !important;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  border: none !important;
+  transition-property: unset;
+  padding: 0px 15px;
+}
+.post-button .btn:hover {
+  color: #fff !important;
+  border-radius: 3px;
+  font-size: 15px;
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
+}
+/* webkit, opera, IE9 */
+::selection {
+  background: #fff;
+  color: #000;
+}
+/* firefox */
+::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.highlight *::selection {
+  background: #000;
 }
